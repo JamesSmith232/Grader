@@ -78,20 +78,6 @@ public class Grader {
         return lowestIndex;
     } //end of lowestScore method
     
-    public static int findName(String nameToFind, String[] names, int students) {
-        boolean isFound = false;
-        int foundIndex = -1;
-        
-        for (int i = 0; i < students && !(isFound); i++) {
-            if (nameToFind.equals(names[i])) {
-                isFound = true; 
-                foundIndex = i;
-            }
-        }
-        
-        return foundIndex;
-    }
-    
     public static void main(String[] args) { 
         NumberFormat formatter = new DecimalFormat("#0.00");
         
