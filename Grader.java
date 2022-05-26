@@ -58,6 +58,7 @@ public class Grader {
         double highest = scores[0]; 
         int highestIndex = 0; 
         
+        //using for loop to decide the highest score in the scores[]
         for (int i = 1; i < students; i++) {
             if (scores[i] > highest) highestIndex = i; 
             highest = Math.max(scores[i], highest);     
@@ -70,6 +71,7 @@ public class Grader {
         double lowest = scores[0];
         int lowestIndex = 0;
         
+        //using for loop to decide the lowest score in the scores[]
         for (int i = 1; i < students; i++) {
             if (scores[i] < lowest) lowestIndex = i;
             lowest = Math.min(scores[i], lowest);
@@ -93,6 +95,7 @@ public class Grader {
         System.out.println("This program will take test scores from students and return the average grade");
         System.out.println("==============================================================================\n");
         
+        //Getting the number of students to be used as the length of both arrays 
         System.out.println("Enter number of students: "); 
         students = keyboard.nextInt(); 
         keyboard.nextLine(); 
@@ -100,12 +103,14 @@ public class Grader {
         scores = new double[students]; 
         names = new String[students]; 
         
+        //calling the getScores() with both arrays and the student number
         getScores(names, scores, students);  
         average = average(scores, students); 
         
         highestIndex = highestScore(scores, students); 
         lowestIndex = lowestScore(scores, students);
         
+        //Displaying the average and the scores 
         System.out.println("\n===========================================================");
         printScores(names, scores, students);
         System.out.println("\n===========================================================");
